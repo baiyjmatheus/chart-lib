@@ -1,7 +1,9 @@
 function drawBarChart(data, option, element) {
-  var chart = $(".chart");
-  var labels = $(".labels");
-  var title = $("<h3></h3>");
+  var chart = $("<ul class='chart'></ul>");
+  var labels = $("<ul class='labels'></ul>");
+  var title = $("<h3 class='title'></h3>");
+  var chartLabels = $("<div class='chart-labels'></div>");
+  var chartContainer = $("<div class='chart-container'></div>");
   
   // Set CSS option for title
   title.css("color", option.fontColour);
@@ -26,12 +28,18 @@ function drawBarChart(data, option, element) {
     chart.append(item);
     labels.append(label);
   }
-  element.append(chart);
+  // Add chart and labels ul to its respect div
+  chartContainer.append(chart);
+  chartLabels.append(labels);
+
+  // Add div to element
+  element.append(chartLabels);
+  element.append(chartContainer);
 }
 
 
 // Test Code
-var element = $("div.chart-container");
+var element = $("div.container");
 
 var data = [6, 9, 5];
 

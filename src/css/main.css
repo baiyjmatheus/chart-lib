@@ -9,9 +9,14 @@ ul {
   padding: 0;
 }
 
-/* outer container */
+/*  */
 div.container {
   margin: 0 auto;
+}
+
+/* h3 align */
+h3.title {
+  text-align: center;
 }
 
 /* Div that holds the bar chart */
