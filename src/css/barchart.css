@@ -46,3 +46,11 @@ div.chart-labels {
   width: 10%;
   text-align: right;
 }
+
+/* xAxis */
+div.x-axis {
+  display: flex;
+  width: 89%;
+  justify-content: space-between;
+  float: right;
+}
