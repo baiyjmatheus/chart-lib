@@ -48,12 +48,13 @@ function drawBarChart(data, option, element) {
       barWidth = (data[i] / option.xAxis) * 100 + "%";
     }
 
+    // Sets bar spacing and width
     item.css("marginBottom", option.barSpacing);
     item.css("width", barWidth);
 
+    // Sets bar properties for multiple valued bar
     if (Array.isArray(data[i])) {
       var totalValue = arraySum(data[i]);
-
       item.css("padding", "0");
 
       for (var k = 0; data[i][k]; k++) {
@@ -63,6 +64,7 @@ function drawBarChart(data, option, element) {
         subBar.css("backgroundColor", option.multipleColors[k % option.multipleColors.length]);
         item.append(subBar);
       }
+      // Sets properties for single valued bar
     } else {
       item.text(data[i]);
       item.css("textAlign", option.textPosition);
@@ -70,6 +72,7 @@ function drawBarChart(data, option, element) {
     }
     label.text(option.labels[i]);
 
+    // Append item and labels to its respectively divs
     chart.append(item);
     labels.append(label);
   }
