@@ -1,0 +1,43 @@
+/* Set all elements to border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove list style and padding from all ul */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* outer container */
+div.container {
+  margin: 0 auto;
+}
+
+/* Div that holds the bar chart */
+div.chart-container {
+  display: inline-block;
+  width: 89%;
+}
+
+/* Axis border */
+div.chart-container ul {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+/* Chart item */
+div.chart-container ul li,
+div.chart-labels ul li {
+  margin: 40px 0;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+/* Container that holds labels on the left side of the chart */
+div.chart-labels {
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+}
