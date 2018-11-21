@@ -34,10 +34,16 @@ div.chart-container ul {
 
 /* Chart item */
 div.chart-container ul li,
-div.chart-labels ul li {
+div.chart-labels ul li,
+span.sub-bar {
   margin: 40px 0;
   padding: 10px 10px;
   border-radius: 5px;
+}
+
+span.sub-bar {
+  display: inline-block;
+  margin: 0;
 }
 
 /* Container that holds labels on the left side of the chart */
