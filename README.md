@@ -18,7 +18,9 @@ Clone chart-lib repository: `git clone https://github.com/baiyjmatheus/chart-lib
 ```
 
 3. drawBarChart(data, option, element) receives 3 three arguments:
+  
   a) data: An array of numbers. Each element will be a bar in a chart. If an element is an array of numbers, the bar will be subdivided into different sections.
+  
   b) option: An object that holds the chart preferences.
   ```
   var option = {
