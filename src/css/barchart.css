@@ -9,23 +9,23 @@ ul {
   padding: 0;
 }
 
-/*  */
+/* Container div centered */
 div.container {
   margin: 0 auto;
 }
 
-/* h3 align */
+/* title aligned to center */
 h3.title {
   text-align: center;
 }
 
-/* Div that holds the bar chart */
+/* Div that holds the bar chart 90% of the line*/
 div.chart-container {
   display: inline-block;
   width: 89%;
 }
 
-/* Axis border */
+/* div Axis border */
 div.chart-container ul {
   padding: 10px;
   border-bottom: 1px solid black;
