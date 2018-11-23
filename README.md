@@ -47,3 +47,6 @@ Clone chart-lib repository: `git clone https://github.com/baiyjmatheus/chart-lib
     ```
     drawBarChart(data, option, element);
     ```
+
+
+![Bar chart demo](/demo-chart.png)
