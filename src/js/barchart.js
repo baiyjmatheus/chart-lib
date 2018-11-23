@@ -112,7 +112,7 @@ var option = {
   barSpacing: "40px",
   xAxis: data.reduce(function(a, b) {
     var aTotal = 0;
-    var btotal = 0;
+    var bTotal = 0;
     if (Array.isArray(a)) {
       aTotal = arraySum(a);
     } else {
