@@ -10,7 +10,8 @@ Clone chart-lib repository: `git clone https://github.com/baiyjmatheus/chart-lib
 
 1. Make sure that your HTML file includes jQuery, barchart.js and barchart.css
 
-2. Create a <div> element that will contain the bar chart.
+2. Create a element that will contain the bar chart.
+   For example:
 
 ```
 <div id="demo"></div>
