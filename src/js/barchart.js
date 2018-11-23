@@ -5,7 +5,7 @@ function arraySum(array) {
   array.forEach(function(arrElement) {
     // checks if array element is an array
     if (Array.isArray(arrElement)) {
-      // if it's in an array then recursively call arrSum to get its total;
+      // if it's in an array then recursively call arrSum to get its array total sum
       total += arraySum(arrElement);
     } else {
       // else adds to the total
@@ -28,6 +28,7 @@ function drawBarChart(data, option, element) {
   title.css("color", option.fontColour);
   title.css("fontSize", option.fontSize);
   title.css("textAlign", option.titlePosition);
+
   // Set CSS options in chart element
   element.css("width", option.width);
   element.css("height", option.height);
@@ -42,6 +43,7 @@ function drawBarChart(data, option, element) {
     var label = $("<li></li>");
     // Set item width according to the biggest value of data
     var barWidth;
+    // barWidth = elementValue / maxValue * 100 (result will be the percentage of the total)
     if (Array.isArray(data[i])) {
       barWidth = (arraySum(data[i]) / option.xAxis) * 100 + "%";
     } else {
@@ -58,18 +60,23 @@ function drawBarChart(data, option, element) {
       item.css("padding", "0");
 
       for (var k = 0; data[i][k]; k++) {
+        // Creates a span for each subElement
         var subBar = $("<span class='sub-bar'></span>").text(data[i][k]);
+        // Calculates subElement width in the current element
         var subBarWidth = (data[i][k] / totalValue) * 100 + "%";
+        // Sets subBar css styles
         subBar.css("width", subBarWidth);
+        // backgroundColor will be iterating through option.multipleColors
         subBar.css("backgroundColor", option.multipleColors[k % option.multipleColors.length]);
         item.append(subBar);
       }
-      // Sets properties for single valued bar
     } else {
+      // Sets properties for single valued bar
       item.text(data[i]);
       item.css("textAlign", option.textPosition);
       item.css("backgroundColor", option.barColor);
     }
+    // Set label text content
     label.text(option.labels[i]);
 
     // Append item and labels to its respectively divs
@@ -114,15 +121,18 @@ var option = {
   textPosition: "left",
   barColor: "lightpink",
   barSpacing: "40px",
+  // xAxis contains the greatest value of the data elements
   xAxis: data.reduce(function(a, b) {
     var aTotal = 0;
     var bTotal = 0;
+    // if element is an array, returns the sum of its elements
     if (Array.isArray(a)) {
       aTotal = arraySum(a);
     } else {
       aTotal = a;
     }
-
+    
+    // if element is an array, returns the sum of its elements
     if (Array.isArray(b)) {
       bTotal = arraySum(b);
     } else {
