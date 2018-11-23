@@ -15,7 +15,7 @@ function arraySum(array) {
   return total;
 }
 
-// Function that draws a bar chart for each element in data, style based on a option object and appends to a provided element
+// Function that draws a bar chart for each element in the data array, styles chart based on a option object and appends to the element argument
 function drawBarChart(data, option, element) {
   var chart = $("<ul class='chart'></ul>");
   var labels = $("<ul class='labels'></ul>");
@@ -98,10 +98,14 @@ function drawBarChart(data, option, element) {
 // ==============================
 // Test Code
 // ==============================
-var element = $("div.container");
 
+// Each element in the array will be a bar in the chart, NUMBERS ONLY
 var data = [[1, 2, 3], [2, 3, 4], 5];
 
+// DOM element that will render the chart
+var element = $("div.container");
+
+// Option obj
 var option = {
   title: "Favourite JS Framework",
   labels: ["Angular", "React", "Vue.js"],
