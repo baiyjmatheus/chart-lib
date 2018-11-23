@@ -121,25 +121,7 @@ var option = {
   textPosition: "left",
   barColor: "lightpink",
   barSpacing: "40px",
-  // xAxis contains the greatest value of the data elements
-  xAxis: data.reduce(function(a, b) {
-    var aTotal = 0;
-    var bTotal = 0;
-    // if element is an array, returns the sum of its elements
-    if (Array.isArray(a)) {
-      aTotal = arraySum(a);
-    } else {
-      aTotal = a;
-    }
-    
-    // if element is an array, returns the sum of its elements
-    if (Array.isArray(b)) {
-      bTotal = arraySum(b);
-    } else {
-      bTotal = b;
-    }
-    return Math.max(aTotal, bTotal);
-  }),
+  xAxis: 10,
   fontSize: "32px",
   fontColour: "red",
   multipleColors: ["lightpink", "lightblue", "lightgreen"]
